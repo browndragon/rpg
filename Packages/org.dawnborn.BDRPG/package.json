@@ -1,0 +1,17 @@
+{
+    "name": "org.dawnborn.bdrpg",
+    "version": "0.0.0",
+    "displayName": "Brown Dragon Unity RPG Utilities",
+    "description": "RPG-native game concepts",
+    "keywords": [
+        "unity",
+        "RPG"
+    ],
+    "unity": "2021.3",
+    "documentationUrl": "https://github.com/browndragon/rpg",
+    "author": {
+        "name": "Brown Dragon",
+        "email": "browndragon@googlegroups.com",
+        "url": "https://github.com/browndragon"
+    }
+}

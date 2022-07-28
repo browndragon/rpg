@@ -1,0 +1,14 @@
+{
+    "name": "org.dawnborn.bdrpg.Runtime",
+    "rootNamespace": "BDRPG.Runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

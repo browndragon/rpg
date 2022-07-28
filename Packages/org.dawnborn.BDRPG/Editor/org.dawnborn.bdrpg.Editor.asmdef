@@ -1,0 +1,18 @@
+{
+    "name": "org.dawnborn.bdrpg.Editor",
+    "rootNamespace": "BDRPG.Editor",
+    "references": [
+        "org.dawnborn.bdrpg.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
