@@ -1,7 +1,9 @@
 {
     "name": "org.dawnborn.bdrpg.Runtime",
-    "rootNamespace": "BDRPG.Runtime",
-    "references": [],
+    "rootNamespace": "BDRPG",
+    "references": [
+        "GUID:bb34d2aec659945f78bf0fd54f97d722"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
