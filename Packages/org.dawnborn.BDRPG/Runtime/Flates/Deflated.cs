@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using BDUtil;
 using UnityEngine;
 
 namespace BDRPG.Flates
@@ -11,9 +8,23 @@ namespace BDRPG.Flates
     public class Deflated : Cameos.ScriptableObject
     {
         /// The stateless game object that this Deflate can be turned into.
-        public Inflated Inflate;
+        public Inflated Inflated;
 
-        public virtual Inflated Acquire() => Instantiate(Inflate);
-        public virtual void Release(Inflated inflate) => Destroy(inflate.gameObject);
+        [SuppressMessage("IDE", "IDE0051")]
+        void OnValidate()
+        {
+            if (Inflated == null) return;
+            var roundTrip = Inflated.Deflated;
+            if (roundTrip == null) return;
+            if (roundTrip == this) return;
+            Debug.LogWarning($"Mismatch: Round trip through {Inflated} is {roundTrip} not this", this);
+        }
+
+        public virtual Inflated Acquire() => Instantiate(Inflated);
+        public virtual void Release(Inflated inflate)
+        {
+            if (inflate == null) return;
+            Destroy(inflate.gameObject);
+        }
     }
 }

@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using BDUtil;
 using UnityEngine;
 
 namespace BDRPG.Flates
@@ -19,6 +17,8 @@ namespace BDRPG.Flates
 
         int Outstanding = 0;
         readonly Stack<Inflated> Inflates = new();
+
+        [SuppressMessage("IDE", "IDE0051")]
         void OnEnable()
         {
             if (!Application.isPlaying) return;
@@ -29,6 +29,7 @@ namespace BDRPG.Flates
                 Inflates.Push(inflate);
             }
         }
+        [SuppressMessage("IDE", "IDE0051")]
         void OnDisable()
         {
             foreach (var inflate in Inflates) base.Release(inflate);
