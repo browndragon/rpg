@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace BDRPG.Slots
 {
+    [AddComponentMenu("BDRPG/EquipSlotFinder")]
     [RequireComponent(typeof(IEquip))]
     public class SlotFinder : MonoBehaviour, Slot.IFinder
     {

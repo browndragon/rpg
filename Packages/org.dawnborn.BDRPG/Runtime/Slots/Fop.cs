@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BDRPG.Slots
 {
     /// A game object which (at least in theory) supports round-tripping through a deflate.
-    [AddComponentMenu("BDRPG/Binder")]
+    [AddComponentMenu("BDRPG/Fop")]
     [Tooltip("A gameobject holding slots")]
     public class Fop : MonoBehaviour, Slot.IOwner
     {

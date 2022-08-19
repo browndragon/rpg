@@ -4,7 +4,7 @@ using UnityEngine;
 namespace BDRPG.Slots
 {
     /// Causes this object to bind to any bindables it runs over.
-    [AddComponentMenu("BDRPG/Binder3D")]
+    [AddComponentMenu("BDRPG/Fop3D")]
     [Tooltip("A gameobject holding slots that autoequips anything it walks on")]
     [RequireComponent(typeof(Fop), typeof(Collider))]
     public class Fop3D : MonoBehaviour
