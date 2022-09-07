@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83e67f5278cb4200a6422bab10c68ea, type: 3}
+  m_Name: RoundLoop
+  m_EditorClassIdentifier: 
+  Phases: []
+  Actions:
+  - rid: 4670118888392359939
+  - rid: 4670118888392359940
+  Loop: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 4670118888392359939
+      type: {class: Phase/PrintAction, ns: BDRPG.Turn, asm: org.dawnborn.bdrpg.Runtime}
+    - rid: 4670118888392359940
+      type: {class: Phase/CountLatch, ns: BDRPG.Turn, asm: org.dawnborn.bdrpg.Runtime}
+      data:
+        Limit: 3
+        OnLatch:
+          rid: 4670118888392359941
+    - rid: 4670118888392359941
+      type: {class: Phase/HaltAction, ns: BDRPG.Turn, asm: org.dawnborn.bdrpg.Runtime}
+      data:
+        Phase: {fileID: 11400000}

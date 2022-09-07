@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32bade410708245c5a108a2c1872624a, type: 3}
+  m_Name: Order
+  m_EditorClassIdentifier: 
+  Phases:
+  - {fileID: 11400000, guid: e0cd9c610f18249bf8078c0d19f2cff1, type: 2}
+  - {fileID: 11400000, guid: 34e46b17f62cb42d2b8e45f2f5ab8fe9, type: 2}
+  - {fileID: 11400000, guid: 49836955f279643d7acbe5db8ec94477, type: 2}
+  Actions:
+  - rid: 4670118888392359942
+  references:
+    version: 2
+    RefIds:
+    - rid: 4670118888392359942
+      type: {class: Phase/PrintAction, ns: BDRPG.Turn, asm: org.dawnborn.bdrpg.Runtime}

@@ -131,7 +131,7 @@ namespace BDRPG.Slots
                 object couldUnbind = Owner.CanDoff(slot, bound, force);
                 if (couldUnbind == null && !force) return false;
                 if (!bound.DoUnbind(slot, force) && !force) return false;
-                equips.RemoveKey(name).OrThrow();
+                equips.Remove(name).OrThrow();
                 Owner.DidDoff(slot, bound, couldUnbind);
                 return true;
             }
