@@ -5,20 +5,9 @@ using UnityEngine;
 namespace BDRPG.Space
 {
     [Tooltip("Settings & configs for a singleton space instance")]
-    public class Space : ScriptableObject
+    public class Space : SingletonAsset<Space>
     {
-        public static Space main => SingletonAsset<Space>.Instance;
-
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-#if UNITY_EDITOR
-        [UnityEditor.InitializeOnLoadMethod]
-#endif
-        static void Init() => _ = main;
-        void OnEnable() => SingletonAsset<Space>.SetIfUnset(this);
-
-
-
-        [SerializeReference, BDUtil.Subtype]
+        [SerializeReference, Subtype]
         public IMetric Metric = new GridMetric(Vector2.one, Vector2.zero);
         public interface IMetric
         {

@@ -80,7 +80,7 @@ namespace BDRPG.Slots
             public IOwner Owner { get; private set; }
             public Frippery SetOwner(IOwner thiz) { Owner = thiz; return this; }
 
-            readonly Map<string, IEquip> equips = new();
+            readonly Dictionary<string, IEquip> equips = new();
             public int Count => equips.Count;
             public IEnumerator<KeyValuePair<Slot, IEquip>> GetEnumerator()
             {
