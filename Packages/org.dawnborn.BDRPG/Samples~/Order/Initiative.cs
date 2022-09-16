@@ -1,51 +1,53 @@
 using System;
+using System.Collections;
+using BDUtil;
 using BDUtil.Pubsub;
 using UnityEngine;
 
 namespace BDRPG
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
-    public class Initiative : MonoBehaviour, ObjsHead.ISortComponent
+    /// There's a head/deque of "who's next", maintained in sorted order (so to reorder, you do have to dequeue/reenqueue explicitly!).
+    /// Initiative (as a system) processes each of the members in initiative order.
+    /// It enters the processing state when it pops an element off; it enters the
+    public class Initiative : SingletonAsset<Initiative>
     {
+        public interface IActor : ObjsHead.ISortComponent
+        {
+            bool IsReady { get; }
+            /// Called with this object removed from Head, present in Actor.
+            /// You _must_ Delay++ if you wish to block the next person from going (such as a human controlled unit)!
+            /// This obliges you to Delay-- when you're done.
+            /// You _must_ self-reenqueue if you wish to execute again!
+            void Act();
+        }
         public ObjsHead Head;
-        public float DelayDither = 5f;
-        public float NextAct = float.NaN;
-        public float ForceMag = 5f;
-        new Rigidbody2D rigidbody;
-        SpriteRenderer sprite;
-        TMPro.TMP_Text text;
-        void OnEnable()
+        public IActor Actor;
+        public Lock Delay;
+        public float Time => UnityEngine.Time.time;
+        readonly Disposes.All unsubscribe = new();
+        protected override void OnEnableSubsystem()
         {
-            rigidbody = GetComponent<Rigidbody2D>();
-            sprite = GetComponent<SpriteRenderer>();
-            text = GetComponentInChildren<TMPro.TMP_Text>();
-            text.text = gameObject.name;
-            NextAct = Time.time + UnityEngine.Random.Range(0, DelayDither);
-            Head.Push(gameObject);
+            base.OnEnableSubsystem();
+            if (Head) unsubscribe.Add(Head.Subscribe(OnPop));
+            unsubscribe.Add(Funcs.MakeSetter(out Func<bool> canceled));
+            Coroutines.StartCoroutine(Consume(canceled));
         }
-        void OnDisable()
+        protected override void OnDisableSubsystem()
         {
-            NextAct = float.NaN;
+            unsubscribe.Dispose();
+            base.OnDisableSubsystem();
         }
-
-        public int CompareTo(ObjsHead.ISortComponent other)
-        => other switch
+        void OnPop(GameObject popped) => (Actor = popped.GetComponent<IActor>()).OrThrowInternal().Act();
+        IEnumerator Consume(Func<bool> isCanceled)
         {
-            null => -1,
-            Initiative i => NextAct.CompareTo(i.NextAct),
-            _ => throw new NotSupportedException($"Can't compare {this} vs {other}"),
-        };
-
-        public void Act()
-        {
-            rigidbody.AddForce(ForceMag * UnityEngine.Random.insideUnitCircle, ForceMode2D.Impulse);
-            NextAct = Time.time + UnityEngine.Random.Range(0, DelayDither);
-            Head.Push(gameObject);
-        }
-
-        public void Update()
-        {
-            sprite.color = Color.Lerp(Color.magenta, Color.red, NextAct - Time.time);
+            bool ReadyToPop() => !isCanceled() && (Head.Peek?.GetComponent<IActor>()?.IsReady ?? false);
+            WaitUntil waitUntil = new(() => isCanceled() || ReadyToPop());
+            while (true)
+            {
+                while (ReadyToPop() && Head.Pop()) { }
+                if (isCanceled()) yield break;
+                yield return waitUntil;
+            }
         }
     }
 }

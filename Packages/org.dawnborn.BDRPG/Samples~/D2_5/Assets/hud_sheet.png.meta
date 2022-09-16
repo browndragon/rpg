@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 5e22c084b9fa94420a36b3957bc6211d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2348382590896274691
+    second: hud_0.png
+  - first:
+      213: -6973489022699259241
+    second: hud_1.png
+  - first:
+      213: 7455037783320684234
+    second: hud_2.png
+  - first:
+      213: 6873764636611052676
+    second: hud_3.png
+  - first:
+      213: 6855901830914948779
+    second: hud_4.png
+  - first:
+      213: -6289700918838086630
+    second: hud_5.png
+  - first:
+      213: -8117904484768390202
+    second: hud_6.png
+  - first:
+      213: -189335445841285350
+    second: hud_7.png
+  - first:
+      213: -8745362305248744253
+    second: hud_8.png
+  - first:
+      213: -1993806108685767647
+    second: hud_9.png
+  - first:
+      213: 1660729804407450940
+    second: hud_coins.png
+  - first:
+      213: -4525731130548092755
+    second: hud_gem_blue.png
+  - first:
+      213: 1406991812840791639
+    second: hud_gem_green.png
+  - first:
+      213: 5549027878118785990
+    second: hud_gem_red.png
+  - first:
+      213: 8328264191132092695
+    second: hud_gem_yellow.png
+  - first:
+      213: -2832404619912018463
+    second: hud_heartEmpty.png
+  - first:
+      213: 768295472135694866
+    second: hud_heartFull.png
+  - first:
+      213: -2382448662405871036
+    second: hud_heartHalf.png
+  - first:
+      213: -884447064774529800
+    second: hud_keyBlue.png
+  - first:
+      213: -8331864796334067338
+    second: hud_keyBlue_disabled.png
+  - first:
+      213: -2405446645696982152
+    second: hud_keyGreem_disabled.png
+  - first:
+      213: -1536074325354615739
+    second: hud_keyGreen.png
+  - first:
+      213: 4631797234045876335
+    second: hud_keyRed.png
+  - first:
+      213: -6731194661033459995
+    second: hud_keyRed_disabled.png
+  - first:
+      213: 8978318115515341475
+    second: hud_keyYellow.png
+  - first:
+      213: 6981016179147927376
+    second: hud_keyYellow_disabled.png
+  - first:
+      213: -6384561649150846839
+    second: hud_p1.png
+  - first:
+      213: 2185887503264777348
+    second: hud_p1Alt.png
+  - first:
+      213: -5777251307421506278
+    second: hud_p2.png
+  - first:
+      213: 7118938060386436828
+    second: hud_p2Alt.png
+  - first:
+      213: 2089205976410760793
+    second: hud_p3.png
+  - first:
+      213: -6441019782617741649
+    second: hud_p3Alt.png
+  - first:
+      213: -99133279435706171
+    second: hud_x.png
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 78
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hud_0.png
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 173
+        width: 30
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d751f2681279020800000000000000
+      internalID: 2348382590896274691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_1.png
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 136
+        width: 26
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79abce45ea0393f90800000000000000
+      internalID: -6973489022699259241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_2.png
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 211
+        width: 32
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6e1fd8d5d957760800000000000000
+      internalID: 7455037783320684234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_3.png
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 57
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48408daa484846f50800000000000000
+      internalID: 6873764636611052676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_4.png
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 211
+        width: 29
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baeb2ae146e052f50800000000000000
+      internalID: 6855901830914948779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_5.png
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 95
+        width: 28
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14353da65e76b8a0800000000000000
+      internalID: -6289700918838086630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_6.png
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 173
+        width: 30
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c364d0b1e8675f80800000000000000
+      internalID: -8117904484768390202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_7.png
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 116
+        width: 32
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f6d374a685f5df0800000000000000
+      internalID: -189335445841285350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_8.png
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 13
+        width: 32
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ccae8b715b32a680800000000000000
+      internalID: -8745362305248744253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_9.png
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 14
+        width: 32
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ce7c468e39454e0800000000000000
+      internalID: -1993806108685767647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_coins.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d2c9b45f81c0710800000000000000
+      internalID: 1660729804407450940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_gem_blue.png
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 213
+        width: 46
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da001ced38f5131c0800000000000000
+      internalID: -4525731130548092755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_gem_green.png
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 72
+        width: 46
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e12466993a68310800000000000000
+      internalID: 1406991812840791639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_gem_red.png
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 36
+        width: 46
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c38204847b120d40800000000000000
+      internalID: 5549027878118785990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_gem_yellow.png
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 46
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719c8042820f39370800000000000000
+      internalID: 8328264191132092695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_heartEmpty.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 53
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e508f1410741b8d0800000000000000
+      internalID: -2832404619912018463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_heartFull.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 53
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a603b49a889aa00800000000000000
+      internalID: 768295472135694866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_heartHalf.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 53
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a81b57097dfeed0800000000000000
+      internalID: -2382448662405871036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyBlue.png
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 93
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc2a71a410d9b3f0800000000000000
+      internalID: -884447064774529800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyBlue_disabled.png
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 133
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671fce1ac154f5c80800000000000000
+      internalID: -8331864796334067338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyGreem_disabled.png
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 53
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873931535032e9ed0800000000000000
+      internalID: -2405446645696982152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyGreen.png
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 28
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ce3a02a84ceaae0800000000000000
+      internalID: -1536074325354615739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyRed.png
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 173
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68f0f64b03774040800000000000000
+      internalID: 4631797234045876335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyRed_disabled.png
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 173
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee38138e1ef592a0800000000000000
+      internalID: -6731194661033459995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyYellow.png
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 133
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa1fb3c1c4699c70800000000000000
+      internalID: 8978318115515341475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_keyYellow_disabled.png
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 68
+        width: 44
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fed595a3d81e060800000000000000
+      internalID: 6981016179147927376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_p1.png
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98818c7c10b7567a0800000000000000
+      internalID: -6384561649150846839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_p1Alt.png
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 155
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48400175a15d55e10800000000000000
+      internalID: 2185887503264777348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_p2.png
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 108
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15eafa8b8413dfa0800000000000000
+      internalID: -5777251307421506278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_p2Alt.png
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 20
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6875bb27c8bc260800000000000000
+      internalID: 7118938060386436828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_p3.png
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 67
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956269634c95efc10800000000000000
+      internalID: 2089205976410760793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_p3Alt.png
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 202
+        width: 47
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa64ec932a6ec96a0800000000000000
+      internalID: -6441019782617741649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hud_x.png
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 30
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0b0ddbececf9ef0800000000000000
+      internalID: -99133279435706171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hud_keyBlue_disabled.png: -8331864796334067338
+      hud_p2.png: -5777251307421506278
+      hud_4.png: 6855901830914948779
+      hud_0.png: 2348382590896274691
+      hud_9.png: -1993806108685767647
+      hud_p2Alt.png: 7118938060386436828
+      hud_keyGreen.png: -1536074325354615739
+      hud_heartHalf.png: -2382448662405871036
+      hud_keyGreem_disabled.png: -2405446645696982152
+      hud_coins.png: 1660729804407450940
+      hud_keyYellow_disabled.png: 6981016179147927376
+      hud_7.png: -189335445841285350
+      hud_p3.png: 2089205976410760793
+      hud_keyYellow.png: 8978318115515341475
+      hud_5.png: -6289700918838086630
+      hud_heartEmpty.png: -2832404619912018463
+      hud_2.png: 7455037783320684234
+      hud_gem_blue.png: -4525731130548092755
+      hud_3.png: 6873764636611052676
+      hud_1.png: -6973489022699259241
+      hud_keyRed.png: 4631797234045876335
+      hud_gem_red.png: 5549027878118785990
+      hud_p3Alt.png: -6441019782617741649
+      hud_6.png: -8117904484768390202
+      hud_keyBlue.png: -884447064774529800
+      hud_p1.png: -6384561649150846839
+      hud_gem_yellow.png: 8328264191132092695
+      hud_x.png: -99133279435706171
+      hud_heartFull.png: 768295472135694866
+      hud_8.png: -8745362305248744253
+      hud_gem_green.png: 1406991812840791639
+      hud_p1Alt.png: 2185887503264777348
+      hud_keyRed_disabled.png: -6731194661033459995
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
