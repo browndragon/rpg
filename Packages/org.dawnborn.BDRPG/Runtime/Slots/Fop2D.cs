@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using BDUtil;
 using UnityEngine;
 
 namespace BDRPG.Slots
@@ -17,12 +18,9 @@ namespace BDRPG.Slots
         void OnTriggerEnter2D(Collider2D other)
         {
             Slot.IFinder finder = other.GetComponent<Slot.IFinder>();
-            IEquip equip = other.GetComponent<IEquip>();
             if (finder == null) return;
-            foreach (Slot slot in finder.GetSlots(Fop.Frippery))
-            {
-                if (slot.Don(equip)) return;
-            }
+            IEquip equip = other.GetComponent<IEquip>().OrThrow();
+            foreach (Slot slot in finder.GetSlots(Fop.Frippery)) if (slot.Don(equip)) return;
         }
     }
 }
