@@ -1,11 +1,13 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
 using BDRPG.Slots;
+using BDUtil;
 using UnityEngine;
 
 namespace BDRPG
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class TestEquip : MonoBehaviour, IEquip, Slot.IMerge
+    public class TestEquip : MonoBehaviour, IEquip
     {
         public float ZRot = 45f;
         public float Veloc = 12f;
@@ -36,7 +38,7 @@ namespace BDRPG
                 return false;
             }
             Debug.Log($"DoBind {slot}", this);
-            Target = slot.GetT<SpriteRenderer>();
+            Target = slot.Owner.GetComponent<SpriteRenderer>();
             Offset = Quaternion.Euler(0f, 0f, Time.time * ZRot) * Vector3.right;
             (renderer.color, Target.color) = (Target.color, renderer.color);
             transform.localScale = .25f * Vector3.one;
@@ -45,7 +47,7 @@ namespace BDRPG
 
         public bool DoUnbind(Slot slot, bool force = false)
         {
-            Debug.Log($"DoUnbind {slot}", this);
+            Debug.Log($"DoUnbind{(force ? "(force)" : "")} {slot}", this);
             transform.position += transform.position - Target.transform.position;
             transform.localScale = 1f * Vector3.one;
             (renderer.color, Target.color) = (Target.color, renderer.color);
@@ -53,7 +55,11 @@ namespace BDRPG
             Target = null;
             return true;
         }
-
-        public bool DoMerge(Slot slot, Slot.IMerge other) => throw new System.NotImplementedException();
+        public bool DoRebind(Slot slot, IEquip @new)
+        {
+            Debug.Log($"DoRebind {slot}: {this}->{@new}", this);
+            slot.Doff(force: true).OrThrowInternal();
+            return slot.Don(@new);
+        }
     }
 }

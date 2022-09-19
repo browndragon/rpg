@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f41bb4e378943fba8478a4252973a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slots:
-  - Colour
-  EmptyOnly: 0
+  DonBindEvent: 12
+  DoffBindEvent: 0
+  Keys:
+  - {fileID: 11400000, guid: e8e8d764c698d43bcbedefdc642d8b6a, type: 2}

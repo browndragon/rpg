@@ -12,7 +12,7 @@ namespace BDRPG
         public bool DoBind(Slot slot)
         {
             if (IsBound) return false;
-            Transform newParent = slot.GetT<Transform>();
+            Transform newParent = slot.Owner.transform;
             if (newParent == null) return false;
             transform.SetParent(newParent);
             StartCoroutine(MoveToHead(adjust: new(0f, 0f, -1f)));
@@ -25,6 +25,13 @@ namespace BDRPG
             StartCoroutine(BlinkIFrames(Time.time + 1f));
             return true;
         }
+        public bool DoRebind(Slot slot, IEquip @new)
+        {
+            slot.Doff(force: true);
+            slot.Don(@new);
+            return true;
+        }
+
         IEnumerator MoveToHead(float delay = .25f, Vector3 adjust = default)
         {
             Vector3 startPos = transform.position;
