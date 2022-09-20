@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using BDUtil.Serialization;
 using UnityEngine;
 
 namespace BDRPG.Slots

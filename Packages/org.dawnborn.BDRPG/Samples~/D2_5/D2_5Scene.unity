@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 416557918}
   - component: {fileID: 416557917}
   - component: {fileID: 416557919}
+  - component: {fileID: 416557920}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -16745,6 +16746,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &416557920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416557915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf0808c03ced4d35992d7e923f94ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &421154375
 GameObject:
   m_ObjectHideFlags: 0
@@ -16794,6 +16807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2888b41d4b49245a4b32c2390e7e2b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KillTiles:
+  - {fileID: 11400000, guid: 01c55e2e73d7b4148931b9b5ea4d4230, type: 2}
   CanBind: 1
 --- !u!114 &421154378
 MonoBehaviour:
@@ -69407,6 +69422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2888b41d4b49245a4b32c2390e7e2b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KillTiles:
+  - {fileID: 11400000, guid: 01c55e2e73d7b4148931b9b5ea4d4230, type: 2}
   CanBind: 1
 --- !u!114 &1865139401
 MonoBehaviour:
