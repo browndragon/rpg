@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RedButton
+  m_Controller: {fileID: 9100000, guid: 4e5db3d005da54624ae49d02d39e3459, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a5c5050c07d0644efa7e2809e27e0233, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7057fa5a96c5e45f7a654bde7a5d84c2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0e7e6a3dd4efc4727915942ff41eee45, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7eac4952607a448a5a4dabd2c288fb68, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b8e882f89237c43bcb708c424c38df87, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7eac4952607a448a5a4dabd2c288fb68, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 93f02e80df1c249ef932b49c7106be4f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7057fa5a96c5e45f7a654bde7a5d84c2, type: 2}

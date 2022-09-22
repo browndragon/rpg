@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4441781951182504445, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -22,6 +26,14 @@ PrefabInstance:
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000000014901159
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553413441680884859, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: Damage
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553413441680884859, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: Debounce
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6111386858024531699, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_Controller
@@ -79,5 +91,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bee
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9040549653891361472, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: HP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040549653891361472, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: hP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040549653891361472, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: logo
+      value: 
+      objectReference: {fileID: 21300000, guid: ab018a593267e4c1bbe2a197062746be, type: 3}
+    - target: {fileID: 9040549653891361472, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: hPLogo
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -8642774514413887833, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+--- !u!1 &1471697686141323155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7520364626457593947, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+  m_PrefabInstance: {fileID: 8948994373247094728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5418848137070792526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471697686141323155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459240f2482ce46bfb0514c0fd14340f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedRange: {x: 3, y: 6}
+  VirtDistance: {x: 0.25, y: 6}
+  PauseTime: {x: 0.5, y: 2.5}

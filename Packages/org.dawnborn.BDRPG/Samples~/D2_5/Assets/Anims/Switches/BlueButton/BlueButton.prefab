@@ -25,19 +25,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4003772702170837154, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.82047325
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4003772702170837154, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.42470822
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4003772702170837154, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.17591995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4003772702170837154, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.33985117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4003772702170837154, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -59,25 +59,37 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: e6806826beb1d4c349a68357c702d77c, type: 2}
+    - target: {fileID: 5231311767596742461, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53af0912f48ed4c68b3631e93b751f03, type: 3}
+    - target: {fileID: 7361763996049220045, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: e6806826beb1d4c349a68357c702d77c, type: 2}
+    - target: {fileID: 7524047373893786435, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
+      propertyPath: OnStart_.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7611928480697366240, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_Name
       value: BlueButton
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.82047325
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.42470822
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.17591995
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000014901159
+      value: -0.33985117
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
@@ -86,7 +98,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7611928480697366240, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
   m_PrefabInstance: {fileID: 2132272730872082423}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8174892466163196261
+--- !u!61 &5733528922473714347
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373416974549834007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &7822448244900153254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +133,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8373416974549834007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4033643919b20452187a9f03dfa7479a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9afbd2718fa334e97a8c872a92c17c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreAdjust: {x: 0, y: 0, z: 0}

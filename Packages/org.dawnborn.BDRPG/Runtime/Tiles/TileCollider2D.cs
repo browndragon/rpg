@@ -136,11 +136,18 @@ namespace BDRPG
         void OnTileStayImpl(bool isCollision, Collider2D collider)
         {
             if (!SymmetricWinner(collider.OrThrow())) return;
+            /// It seems that sometimes we can get an OnTileStay without enter.
+            /// Theorizing that those represent some kind of mixup wrt Enters & Exits same turn, let's suppress such events.
+            if (!enters.ContainsKey(collider)) return;
             UpdateSets(isCollision, collider, enters[collider], stays[collider], exits[collider]);
         }
         void OnTileExitImpl(bool isCollision, Collider2D collider)
         {
             if (!SymmetricWinner(collider.OrThrow())) return;
+            /// It seems that sometimes we can get an OnTileExit without enter.
+            /// Theorizing that those represent some kind of mixup wrt Enters & Exits same turn, let's suppress such events.
+            if (!enters.ContainsKey(collider)) return;
+
             exits[collider].Clear();
             exits[collider].AddRange(enters[collider]);
             enters.Clear();
@@ -157,9 +164,18 @@ namespace BDRPG
             exits.Remove(collider);
         }
 
-        void OnCollisionEnter2D(Collision2D other) => OnTileEnterImpl(true, other.otherCollider);
-        void OnCollisionStay2D(Collision2D other) => OnTileStayImpl(true, other.otherCollider);
-        void OnCollisionExit2D(Collision2D other) => OnTileExitImpl(true, other.otherCollider);
+        void OnCollisionEnter2D(Collision2D other) => OnTileEnterImpl(true,
+            other.collider == this.tilemapCollider2D ?
+            other.otherCollider : other.collider
+        );
+        void OnCollisionStay2D(Collision2D other) => OnTileStayImpl(true,
+            other.collider == this.tilemapCollider2D ?
+            other.otherCollider : other.collider
+        );
+        void OnCollisionExit2D(Collision2D other) => OnTileExitImpl(true,
+            other.collider == this.tilemapCollider2D ?
+            other.otherCollider : other.collider
+        );
 
         void OnTriggerEnter2D(Collider2D other) => OnTileEnterImpl(false, other);
         void OnTriggerStay2D(Collider2D other) => OnTileStayImpl(false, other);
