@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/D2_5/UXScene.unity
     guid: 998bcdc8c269941b388e572e7df0560c
+  - enabled: 1
+    path: Assets/Samples/D2_5/Victory.unity
+    guid: 952dc910eafc74224a62e4aad1b29702
   m_configObjects: {}

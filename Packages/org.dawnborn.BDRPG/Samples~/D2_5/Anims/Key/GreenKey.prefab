@@ -10,10 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3765797405168920628}
   - component: {fileID: 3765797405168920631}
-  - component: {fileID: 3765797405168920629}
   - component: {fileID: 3765797405168920630}
   - component: {fileID: 3765797405168920634}
-  - component: {fileID: 3765797405168920635}
   - component: {fileID: 793536783848178926}
   m_Layer: 0
   m_Name: GreenKey
@@ -64,56 +62,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &3765797405168920629
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765797405168920625}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &3765797405168920630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765797405168920625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9f41bb4e378943fba8478a4252973a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DonBindEvent: 12
-  DoffBindEvent: 0
-  Keys: []
---- !u!114 &3765797405168920634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3765797405168920625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2888b41d4b49245a4b32c2390e7e2b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CanBind: 1
---- !u!114 &3765797405168920635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +78,19 @@ MonoBehaviour:
   DoffBindEvent: 0
   Keys:
   - {fileID: 11400000, guid: d6377ae5fae204e8ba2216c83ce9558a, type: 2}
+--- !u!114 &3765797405168920634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765797405168920625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2888b41d4b49245a4b32c2390e7e2b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanBind: 1
 --- !u!114 &793536783848178926
 MonoBehaviour:
   m_ObjectHideFlags: 0

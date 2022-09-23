@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using BDUtil;
 using BDUtil.Math;
+using BDUtil.Raw;
 using UnityEngine;
 
 namespace BDRPG
@@ -12,6 +13,7 @@ namespace BDRPG
         public float PartThresh = 1f;
         new Rigidbody2D rigidbody;
         new SpriteRenderer renderer;
+        readonly Deque<SpriteRenderer> trail = new();
 
         void Awake()
         {
@@ -28,14 +30,13 @@ namespace BDRPG
                 if (accum > PartThresh)
                 {
                     accum = 0;
-                    GameObject trailPart = new();
-                    SpriteRenderer footprint = trailPart.AddComponent<SpriteRenderer>();
+                    SpriteRenderer footprint = trail.PopBack() ?? new GameObject("Trail").AddComponent<SpriteRenderer>();
+                    footprint.gameObject.SetActive(true);
                     footprint.sprite = renderer.sprite;
-
                     footprint.color = Color.Lerp(Color.gray * renderer.color, Color.blue, speed / 30f).WithA(.5f);
                     footprint.transform.rotation = renderer.transform.rotation;
-                    trailPart.transform.position = transform.position;
-                    // In case we die, we want our clones to go, so put this on a different object.
+                    footprint.transform.position = transform.position;
+                    // In case we die, we want our clones to go *later*...
                     Coroutines.StartCoroutine(FadeFootprint(footprint));
                 }
                 yield return null;
@@ -45,12 +46,16 @@ namespace BDRPG
         {
             Color init = footprint.color;
             Color target = new(1f, 0f, 0f, 0f);
-            for (float start = Time.time, elapsed = 0f, max = .5f; elapsed < max; elapsed = Time.time - start)
+            foreach (var timer in new Timer(.5f))
             {
-                footprint.color = Color.Lerp(init, target, elapsed / max);
+                if (footprint == null) yield break;
+                footprint.color = Color.Lerp(init, target, timer);
                 yield return null;
             }
-            Destroy(footprint.gameObject);
+            if (footprint == null) yield break;
+            if (this == null) yield break;
+            footprint.gameObject.SetActive(false);
+            trail.Add(footprint);
         }
     }
 }

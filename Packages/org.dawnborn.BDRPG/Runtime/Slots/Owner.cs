@@ -47,5 +47,9 @@ namespace BDRPG.Slots
             DidDoff(key, had);
             return true;
         }
+        public void DoffAll()
+        {
+            foreach (Key key in new List<Key>(Keys)) Doff(key, force: true);
+        }
     }
 }

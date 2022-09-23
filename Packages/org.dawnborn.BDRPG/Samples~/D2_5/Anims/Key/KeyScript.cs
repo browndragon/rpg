@@ -1,19 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
 using BDRPG.Slots;
+using BDUtil;
 using BDUtil.Math;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace BDRPG
 {
     public class KeyScript : MonoBehaviour, IEquip
     {
         public bool CanBind = true;
-        public bool IsBound => transform.parent != null;
+        public Slot Bound;
+
+        void PreDestroy()
+        {
+            Debug.Log($"Parent dying; self-unbinding {this}", this);
+            Bound.Doff(true);
+        }
+
         public bool DoBind(Slot slot)
         {
-            if (IsBound) return false;
+            if (Bound) return false;
+            Bound = slot;
             Transform newParent = slot.Owner.transform;
             if (newParent == null) return false;
             transform.SetParent(newParent);
@@ -22,7 +29,8 @@ namespace BDRPG
         }
         public bool DoUnbind(Slot slot, bool force = false)
         {
-            if (!IsBound) return false;
+            if (!Bound) return false;
+            Bound = default;
             transform.SetParent(null, true);
             StartCoroutine(BlinkIFrames(1f));
             return true;
@@ -34,19 +42,12 @@ namespace BDRPG
             return true;
         }
 
-        IEnumerator MoveToHead(float delay = .25f, Vector3 adjust = default)
+        IEnumerator MoveToHead(float speed = 16f, Vector3 adjust = default)
         {
-            Vector3 startPos = transform.position;
-            for (float start = Time.time, elapsed = 0f; elapsed < delay; elapsed = Time.time - start)
+            Transform transform = this.transform;
+            while (transform != null && transform.parent != null)
             {
-                if (this == null) yield break;
-
-                transform.position = Vector3.Lerp(startPos, transform.parent.position + adjust, elapsed / delay);
-                yield return null;
-            }
-            while (this != null && transform.parent != null)
-            {
-                transform.position = transform.parent.position + adjust;
+                transform.position = Vector3.MoveTowards(transform.position, transform.parent.position + adjust, Time.deltaTime * speed);
                 yield return null;
             }
         }
@@ -58,12 +59,12 @@ namespace BDRPG
             try
             {
                 CanBind = false;
-                for (float start = Time.time, elapsed = 0f; elapsed < delay; elapsed = Time.time - start)
+                foreach (var timer in new Timer(delay))
                 {
                     if (this == null) yield break;
-                    float tween = Mathf.Abs(Mathf.Sin(elapsed * frequency * Mathf.PI));
+                    float tween = Mathf.Abs(Mathf.Sin(timer.Elapsed * frequency * Mathf.PI));
                     renderer.color = renderer.color.WithA(Mathf.Lerp(min, max, tween));
-                    transform.position = transform.position.WithZ(Mathf.Min(0, transform.position.z + elapsed * elapsed * 9.8f));
+                    transform.position = transform.position.WithZ(Mathf.Min(0, transform.position.z + Mathf.Pow(timer.Elapsed, 2f) * 9.8f));
                     yield return null;
                 }
             }

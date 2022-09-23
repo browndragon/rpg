@@ -36,7 +36,8 @@ namespace BDRPG
             }
             if (target == null)
             {
-                canvasGroup.alpha -= Time.time;
+                /// World's worst tween ^_^
+                canvasGroup.alpha -= 3f * Time.deltaTime;
                 return;
             }
             transform.position = camera.WorldToScreenPoint(target.RendererTransform.transform.position);
@@ -63,9 +64,12 @@ namespace BDRPG
                 var image = FillHeart(target, intPart++);
                 image.fillAmount = floatPart;
             }
-            for (int i = intPart; i < Hearts.transform.childCount; ++i) Destroy(
-                Hearts.transform.GetChild(i).gameObject
-            );
+            for (int i = Hearts.transform.childCount - 1; i >= intPart; --i)
+            {
+                GameObject child = Hearts.transform.GetChild(i).gameObject;
+                child.transform.SetParent(null);
+                Destroy(child);
+            }
         }
 
         private Image FillHeart(StatusHaver target, int i)

@@ -202,6 +202,9 @@ GameObject:
   - component: {fileID: 1922706337}
   - component: {fileID: 1922706336}
   - component: {fileID: 1922706335}
+  - component: {fileID: 1922706340}
+  - component: {fileID: 1922706339}
+  - component: {fileID: 1922706341}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -291,6 +294,88 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1922706339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922706334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae5d1f26f30a48688e5dd79e9cbed10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Proto: {fileID: 7986711044185433513, guid: 41f38e328738f4390bbf0c5a38e1e38d, type: 3}
+--- !u!114 &1922706340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922706334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca0209ff210b48f4aa06e90cfbfe1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Subscribes:
+  - rid: 6355734079275270144
+  - rid: 6355734079275270145
+  references:
+    version: 2
+    RefIds:
+    - rid: 6355734079275270144
+      type: {class: DamageTopic/UEventDamage, ns: BDRPG, asm: Assembly-CSharp}
+      data:
+        Topic: {fileID: 11400000, guid: 57e28734a005c460ba348d690ca9b006, type: 2}
+        Event:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1922706339}
+              m_TargetAssemblyTypeName: BDRPG.SpawnInWorld, Assembly-CSharp
+              m_MethodName: Spawn
+              m_Mode: 0
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - rid: 6355734079275270145
+      type: {class: Subscribers/UEventTopic, ns: BDUtil.Pubsub, asm: org.dawnborn.bdutil.Runtime}
+      data:
+        Topic: {fileID: 11400000, guid: 6eab8a441daf64033914d47ab26c0701, type: 2}
+        Event:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1922706341}
+              m_TargetAssemblyTypeName: BDRPG.SceneChanger, Assembly-CSharp
+              m_MethodName: OpenScene
+              m_Mode: 5
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: Samples/D2_5/Victory
+                m_BoolArgument: 0
+              m_CallState: 2
+--- !u!114 &1922706341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922706334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f120dc146f245219b94d0c745c3466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultScene: 
 --- !u!114 &718762034234062961
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using BDUtil;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,22 +6,27 @@ namespace BDRPG
 {
     public class ButtonScript : MonoBehaviour
     {
-        public float DelayOn = .25f;
+        public Timer DelayOn = .25f;
         [Tooltip("If this is infinity, it can't get switched back off...")]
-        public float DelayOff = .25f;
+        public Timer DelayOff = float.PositiveInfinity;
         public UnityEvent<bool> Publish;
-        float DebounceUntil = float.NegativeInfinity;
         Animator animator;
 
-        void Awake() => animator = GetComponentInChildren<Animator>();
+        void Awake()
+        {
+            animator = GetComponentInChildren<Animator>();
+            DelayOn.Halt();
+            DelayOff.Halt();
+        }
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (Time.time < DebounceUntil) return;
-            bool isOn = !animator.GetBool("IsOn");
-            animator.SetBool("IsOn", isOn);
-            Publish?.Invoke(isOn);
-            Debug.Log($"Button {this} is {(isOn ? "on" : "off")}", this);
-            DebounceUntil = Time.time + (isOn ? DelayOff : DelayOn);
+            bool becomingOn = !animator.GetBool("IsOn");
+            if (becomingOn && DelayOn.IsRunning || !becomingOn && DelayOff.IsRunning) return;
+            animator.SetBool("IsOn", becomingOn);
+            Publish?.Invoke(becomingOn);
+            Debug.Log($"Button {this} is {(becomingOn ? "on" : "off")}", this);
+            if (becomingOn) DelayOn.Reset();
+            else DelayOff.Reset();
         }
     }
 }

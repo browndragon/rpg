@@ -1,4 +1,5 @@
 using System.Collections;
+using BDUtil;
 using BDUtil.Math;
 using UnityEngine;
 
@@ -27,15 +28,19 @@ namespace BDRPG
         }
         IEnumerator Die()
         {
+            // Seems to be a good idea? Without this, we're stuck trying to rescue from certain death.
+            gameObject.BroadcastMessage("PreDestroy", SendMessageOptions.DontRequireReceiver);
+
             SpriteRenderer renderer = SpriteRenderer;
             Color init = renderer.color;
             Color target = renderer.color.WithA(0f);
-            for (float start = Time.time, max = .5f, elapsed = 0f; elapsed < max; elapsed = Time.time - start)
+            foreach (var timer in new Timer(.5f))
             {
-                renderer.transform.eulerAngles = renderer.transform.eulerAngles.WithZ(elapsed * 4 * 360f);
-                renderer.color = Color.Lerp(init, target, elapsed / max);
+                renderer.transform.eulerAngles = renderer.transform.eulerAngles.WithZ(timer.Elapsed * 4 * 360f);
+                renderer.color = Color.Lerp(init, target, timer);
                 yield return null;
             }
+
             Destroy(gameObject);
         }
         public Transform RendererTransform => SpriteRenderer.transform;

@@ -57,11 +57,10 @@ namespace BDRPG
             float start = Time.time;
             Vector3 init = transform.localPosition;
             float upscale = position.x < init.x ? -.25f : +1.5f;
-            float duration = .25f;
-            for (float elapsed = Time.time - start; elapsed < duration; elapsed = Time.time - start)
+            foreach (var timer in new Timer(.25f))
             {
-                Vector3 now = Vector3.Lerp(init, position, Easings.Impl.InOutSine(elapsed / duration));
-                now.y = 64f * Mathf.Lerp(0, upscale, Easings.Impl.OutSine((2 * elapsed - duration) / (2f * duration)));
+                Vector3 now = Vector3.Lerp(init, position, Easings.Impl.InOutSine(timer));
+                now.y = 64f * Mathf.Lerp(0, upscale, Easings.Impl.OutSine((2 * timer.Elapsed - timer.Length) / (2f * timer.Length)));
                 transform.localPosition = now;
                 yield return null;
             }
