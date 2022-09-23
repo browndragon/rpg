@@ -169,10 +169,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -181,7 +181,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -214,7 +214,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -268,13 +268,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clips:
   - chance: 3
-    Delay: {x: 4, y: 6}
+    delay: {x: 2, y: 5}
+    volume: {x: 0, y: 0}
     AudioClip: {fileID: 0}
   - chance: 2
-    Delay: {x: 5, y: 10}
+    delay: {x: 1, y: 0}
+    volume: {x: 0.33, y: 0.66}
     AudioClip: {fileID: 8300000, guid: 71e09010e5dc847ea95291a4833708f4, type: 3}
   - chance: 1
-    Delay: {x: 5, y: 10}
+    delay: {x: 1, y: 0}
+    volume: {x: 0.33, y: 0.66}
     AudioClip: {fileID: 8300000, guid: e6f5d7192929f4346bda2fc8dd639b47, type: 3}
 --- !u!1 &7611928480697366240
 GameObject:

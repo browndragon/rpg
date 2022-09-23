@@ -12,9 +12,15 @@ namespace BDRPG
         {
             [Tooltip("==0 means ==1; <0 means disabled.")]
             [SerializeField] float chance;
-            public Vector2 Delay;
+            static float OrValue(float a, float b = 0f) => a == default ? 1f : a < b ? b : a;
+            public float Chance => OrValue(chance);
+            [SerializeField] Vector2 delay;
+            public float MinDelay => OrValue(delay.x);
+            public float MaxDelay => OrValue(delay.y, MinDelay);
+            [SerializeField] Vector2 volume;
+            public float MinVolume => OrValue(volume.x);
+            public float MaxVolume => OrValue(volume.y, MinVolume);
             public AudioClip AudioClip;
-            public float Chance => chance == default ? 1f : chance < 0 ? 0f : chance;
         }
         public Clip[] Clips;
         AudioSource Source;
@@ -32,24 +38,27 @@ namespace BDRPG
         }
         void Update()
         {
-            if (Source.isPlaying) return;
             if (delay.IsRunning) return;
+            if (Source.isPlaying) return;
+
             float pick = UnityEngine.Random.Range(0, Odds);
             foreach (Clip clip in Clips)
             {
                 if ((pick -= clip.Chance) <= 0f)
                 {
-                    delay = UnityEngine.Random.Range(clip.Delay.x, clip.Delay.y);
+                    delay = UnityEngine.Random.Range(clip.MinDelay, clip.MaxDelay);
                     if (clip.AudioClip != null)
                     {
                         Source.clip = clip.AudioClip;
+                        Source.volume = UnityEngine.Random.Range(clip.MinVolume, clip.MaxVolume);
                         Source.Play();
                         delay = delay.Length + clip.AudioClip.length;
                     }
-                    delay.Restart();
+                    delay = delay.Restart();
                     break;
                 }
             }
+            throw new NotImplementedException($"Ran through all {this}'s options and didn't choose any?!");
         }
     }
 }
