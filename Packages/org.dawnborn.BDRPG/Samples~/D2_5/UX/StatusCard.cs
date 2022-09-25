@@ -30,6 +30,7 @@ namespace BDRPG
 
         void LateUpdate()
         {
+            if (!gameObject.scene.isLoaded) return;
             StatusHaver target = null;
             int collided = Physics2D.OverlapPointNonAlloc(camera.ScreenPointToRay(Input.mousePosition).AtZ(), scratch);
             for (int i = 0; i < collided; ++i)

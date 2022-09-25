@@ -17,19 +17,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7c97f5232537d479abbf5893646403b6, type: 2}
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.82047325
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.42470822
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.17591995
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.33985117
+      value: 0.000000014901159
       objectReference: {fileID: 0}
     - target: {fileID: 2553413441680884859, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: Damage

@@ -15,8 +15,8 @@ namespace BDRPG
         protected override void OnEnable()
         {
             if (!EditorUtils.IsPlayingOrWillChangePlaymode) EditorUtils.InsertPreloadedAsset(this);
-            base.OnEnable();
             main = this;
+            base.OnEnable();
         }
         protected override void OnDisable()
         {

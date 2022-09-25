@@ -89,19 +89,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.82047325
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.42470822
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.17591995
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.33985117
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8227789586895816159, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
@@ -143,9 +143,7 @@ MonoBehaviour:
     Length: 0
     Start: -Infinity
   DelayOn: 0.25
-  DelayOff:
-    Length: 0.25
-    Start: -Infinity
+  DelayOff: 0.25
   <IsOn>k__BackingField:
     topic: {fileID: 0}
     DefaultValue: 0

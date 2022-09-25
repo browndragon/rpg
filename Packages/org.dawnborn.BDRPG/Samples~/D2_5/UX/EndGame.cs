@@ -30,6 +30,7 @@ namespace BDRPG
         void OnDestroy() => Destroy(pixel);
         void OnFlagChange(Observable.Update update)
         {
+            if (!gameObject.scene.isLoaded) return;
             int i = 0;
             foreach (GameObject sceneFlag in Flags.Collection)
             {

@@ -9,7 +9,7 @@ namespace BDRPG
         public Timer Delay = 0f;
         public float DelayOn = .25f;
         [Tooltip("If this is infinity, it can't get switched back off...")]
-        public Timer DelayOff = .25f;
+        public float DelayOff = .25f;
         [field: SerializeField] public BDUtil.Pubsub.Val<bool> IsOn { get; private set; }
         public UnityEvent<bool> Publish;
         Animator animator;
@@ -28,8 +28,8 @@ namespace BDRPG
         {
             animator.SetBool("IsOn", IsOn.Value);
             Publish?.Invoke(IsOn.Value);
-            if (IsOn.Value) Delay = new(DelayOn);
-            else Delay = new(DelayOff);
+            if (IsOn.Value) Delay = new(DelayOff);
+            else Delay = new(DelayOn);
         }
         protected virtual void OnTriggerEnter2D(Collider2D other) => SetIsOnTwiddle();
 

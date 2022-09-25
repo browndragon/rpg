@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623769754967480306}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.42470822, y: 0.17591995, z: -0.33985117, w: 0.82047325}
   m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -312,9 +312,7 @@ MonoBehaviour:
     Length: 0
     Start: -Infinity
   DelayOn: 0.25
-  DelayOff:
-    Length: 0.25
-    Start: -Infinity
+  DelayOff: 0.25
   <IsOn>k__BackingField:
     topic: {fileID: 0}
     DefaultValue: 0
