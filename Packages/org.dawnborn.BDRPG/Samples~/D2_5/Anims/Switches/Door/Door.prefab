@@ -89,19 +89,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.82047325
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.42470822
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.17591995
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8531149886422423593, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.33985117
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8227789586895816159, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
@@ -139,9 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815e3e0f6acfe4d0d830cbe24d09d003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayOn:
-    Length: 0.25
+  Delay:
+    Length: 0
     Start: -Infinity
+  DelayOn: 0.25
   DelayOff:
     Length: 0.25
     Start: -Infinity
