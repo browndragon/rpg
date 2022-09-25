@@ -1,5 +1,6 @@
 using System.Collections;
 using BDUtil;
+using BDUtil.Library;
 using BDUtil.Math;
 using UnityEngine;
 
@@ -13,6 +14,19 @@ namespace BDRPG
         public Sprite Logo => logo == null ? SpriteRenderer.sprite : logo;
         SpriteRenderer spriteRenderer;
         SpriteRenderer SpriteRenderer => spriteRenderer ??= GetComponentInChildren<SpriteRenderer>();
+        Player hurtPlayer;
+        Player HurtPlayer
+        {
+            get
+            {
+                if (hurtPlayer != null) return hurtPlayer;
+                foreach (Player p in GetComponentsInChildren<Player>())
+                {
+                    if (p.Category == "Hurt") { hurtPlayer = p; break; }
+                }
+                return hurtPlayer;
+            }
+        }
         [SerializeField] Sprite hPLogo;
         public Sprite HPLogo => hPLogo == null ? Logo : hPLogo;
         [SerializeField] float hP = 3f;
@@ -23,6 +37,7 @@ namespace BDRPG
             {
                 bool wasDying = hP <= 0;
                 hP = value;
+                HurtPlayer?.PlayCurrentCategory();
                 if (hP <= 0 && !wasDying) StartCoroutine(Die());
             }
         }

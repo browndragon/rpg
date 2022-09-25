@@ -1,5 +1,6 @@
 using BDUtil;
 using BDUtil.Math;
+using BDUtil.Raw;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,12 +9,14 @@ namespace BDRPG
 {
     public class StatusCard : MonoBehaviour
     {
+        public Vector3 Offset = new(-.125f, -.125f, -1f);
         CanvasGroup canvasGroup;
         new Camera camera;
         TMPro.TMP_Text Name;
         Image Logo;
         public Image HeartPrefab;
         LayoutGroup Hearts;
+        readonly Deque<GameObject> Cache = new();
         Collider2D[] scratch = new Collider2D[16];
 
         void Awake()
@@ -40,8 +43,8 @@ namespace BDRPG
                 canvasGroup.alpha -= 3f * Time.deltaTime;
                 return;
             }
-            transform.position = camera.WorldToScreenPoint(target.RendererTransform.transform.position);
-            transform.position += 1f * Vector3.up;
+
+            transform.position = target.RendererTransform.transform.position + Offset;
             canvasGroup.alpha = 1f;
 
             Name.text = target.DisplayName;
@@ -68,7 +71,8 @@ namespace BDRPG
             {
                 GameObject child = Hearts.transform.GetChild(i).gameObject;
                 child.transform.SetParent(null);
-                Destroy(child);
+                child.SetActive(false);
+                Cache.Add(child);
             }
         }
 
@@ -76,7 +80,16 @@ namespace BDRPG
         {
             Transform transform = Hearts.transform;
             Image heart;
-            if (i >= Hearts.transform.childCount) heart = Instantiate(HeartPrefab, Hearts.transform);
+            if (i >= Hearts.transform.childCount)
+            {
+                heart = Cache.PopBack()?.GetComponent<Image>();
+                if (heart != null)
+                {
+                    heart.gameObject.SetActive(true);
+                    heart.transform.SetParent(Hearts.transform);
+                }
+                if (heart == null) heart = Instantiate(HeartPrefab, Hearts.transform);
+            }
             else heart = transform.GetChild(i).GetComponent<Image>();
             heart.sprite = target.HPLogo;
             heart.fillMethod = Image.FillMethod.Radial360;

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc03e39666f40e89ed058fdb02c45a, type: 3}
+  m_Name: TorchLib
+  m_EditorClassIdentifier: 
+  HashSource_: 4
+  Entries:
+  - tags:
+    - crackle
+    odds: 5
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 2, y: 4}
+      AudioClip: {fileID: 0}
+  - tags:
+    - crackle
+    odds: 4
+    Data:
+      volume: {x: 0.125, y: 0.25}
+      delay: {x: 0.125, y: 0.5}
+      AudioClip: {fileID: 8300000, guid: 71e09010e5dc847ea95291a4833708f4, type: 3}
+  - tags:
+    - crackle
+    odds: 3
+    Data:
+      volume: {x: 0.25, y: 0.375}
+      delay: {x: 0.5, y: 2}
+      AudioClip: {fileID: 8300000, guid: 71e09010e5dc847ea95291a4833708f4, type: 3}
+  - tags:
+    - crackle
+    odds: 2
+    Data:
+      volume: {x: 0.125, y: 0.375}
+      delay: {x: 0.125, y: 2}
+      AudioClip: {fileID: 8300000, guid: e6f5d7192929f4346bda2fc8dd639b47, type: 3}

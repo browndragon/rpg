@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc03e39666f40e89ed058fdb02c45a, type: 3}
+  m_Name: DoorSounds
+  m_EditorClassIdentifier: 
+  HashSource_: 0
+  Entries:
+  - tags:
+    - On
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 333afc10e46f94fd7a06b0e18a4ccbc5, type: 3}
+  - tags:
+    - On
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 7107e09d929dd4768926a8cd05fdbd28, type: 3}
+  - tags:
+    - Off
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 38761f6252be64cad9242326c8d529a7, type: 3}
+  - tags:
+    - Off
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 204a08d4205a0453d888d43ec1426c60, type: 3}
+  - tags:
+    - Off
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 981202627e9e040b5a826e72e22a07d2, type: 3}
+  - tags:
+    - Off
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: c580d07a2218c4192a76ae6026f5308b, type: 3}
+  VolumeScale: 0.25

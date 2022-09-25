@@ -24,6 +24,7 @@ namespace BDRPG
         void OnCollisionEnter2D(Collision2D collision)
         {
             if (Debounce.IsRunning) return;
+            if (collision.rigidbody == null || collision.otherRigidbody == null) return;
             StatusHaver haver = collision.collider.GetComponent<StatusHaver>();
             if (haver == null) return;
             /// If we're not moving into them, then this isn't an attack.
@@ -33,7 +34,7 @@ namespace BDRPG
             len *= Damage;
             collision.rigidbody.AddForce(len * collision.otherRigidbody.velocity);
             haver.HP -= len;
-            SoloDamageTopic.main.Value = new(
+            SoloDamageTopic.main.OrThrow().Value = new(
                 (Vector3)(collision.rigidbody.position + collision.otherRigidbody.position) / 2,
                 len
             );

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Torch
+  m_Controller: {fileID: 9100000, guid: 3ca0b2819d78e4516bb823e49f047217, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 987a2cf5eef494af1a2fc30bd7a0125c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b8e882f89237c43bcb708c424c38df87, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ed0c8d9f6f47d49b89bd78936f9670e5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b8e882f89237c43bcb708c424c38df87, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cbd7b2c63a2294246b22e3a15421ea2f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a5c5050c07d0644efa7e2809e27e0233, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 71871f22c12a44becaf27577cb732b27, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a5c5050c07d0644efa7e2809e27e0233, type: 2}

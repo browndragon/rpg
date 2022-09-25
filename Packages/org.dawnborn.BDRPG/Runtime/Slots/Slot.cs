@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-
 namespace BDRPG.Slots
 {
     /// NOT serializable; too recursive -- has a reference to the full Slot.Binder.
@@ -25,6 +21,7 @@ namespace BDRPG.Slots
             set => Owner.Values[Key] = value;
         }
         public bool Don(IEquip bound) => Owner.Don(Key, bound);
-        public bool Doff(bool force) => Owner.Doff(Key, force);
+        public bool Doff(bool force = false) => Owner.Doff(Key, force);
+        public override string ToString() => $"{Owner}[{Key}]";
     }
 }

@@ -15,14 +15,20 @@ namespace BDRPG
 
         void OnTileEnter(TileCollider2D.TileCollision collision)
         {
+            bool killedAny = false;
             foreach (Vector3Int cell in collision.Enters)
             {
                 TileBase atCell = collision.tilemap.GetTile(cell);
                 if (KillTiles.Contains(atCell))
                 {
                     collision.tilemap.SetTile(cell, null);
-                    collision.tilemapCollider.ProcessTilemapChanges();
+                    killedAny = true;
                 }
+            }
+            if (killedAny)
+            {
+                collision.tilemapCollider.ProcessTilemapChanges();
+                SendMessage("OnTileKilled", SendMessageOptions.DontRequireReceiver);
             }
         }
     }

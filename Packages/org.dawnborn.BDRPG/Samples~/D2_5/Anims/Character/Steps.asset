@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dc03e39666f40e89ed058fdb02c45a, type: 3}
+  m_Name: Steps
+  m_EditorClassIdentifier: 
+  HashSource_: 0
+  Entries:
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 56f00fd0835c44b388e0be97c6d102f6, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 2e62bd3f646074ad4acfa32a176a826e, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: b1fe43081afeb4492afdce3eb46ab7bc, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 077dbd956d4084f44ab6f5ecc0c5e213, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0, y: 0}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: b28f213c71d1b4e89b411e2cbc5365cf, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 31275477436b4469a82af460a3c3e684, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 4a84f6ec57477460bb472dc00da4bac2, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: f4043d3038212424b922c5dbcd02b198, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 07a24bc1c90944587abf7fdac5c29553, type: 3}
+  - tags:
+    - Step
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 2cdb3453ceda54543a4aec9be9a48ac3, type: 3}
+  - tags: []
+    odds: 0
+    Data:
+      volume: {x: 0.5, y: 1}
+      delay: {x: 0, y: 0}
+      AudioClip: {fileID: 8300000, guid: 2cdb3453ceda54543a4aec9be9a48ac3, type: 3}
+  VolumeScale: 0.25

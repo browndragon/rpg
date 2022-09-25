@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 534091296688687548, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: Library
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c97f5232537d479abbf5893646403b6, type: 2}
     - target: {fileID: 737749950599716684, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -90,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 7520364626457593947, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: m_Name
       value: Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735929853896873736, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
+      propertyPath: MaxDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9040549653891361472, guid: 73c4975e618554faf97992b8d64b5962, type: 3}
       propertyPath: HP

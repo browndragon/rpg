@@ -14,11 +14,10 @@ namespace BDRPG.Slots
         bool DoUnbind(Slot slot, bool force);
 
         /// Called on old `this` whenever `@new` tries to bind to `slot`.
-        /// Generally return `false` if the situation shouldn't change (because @new was not equipped),
-        /// and `true` if any of:
-        /// * the new equip replaces the old equip (changing weapons): `return slot.Doff(force:true) && slot.Don(@new)`
+        /// Since the @new is trying to bind, a successful return is up to you signaling whether it should consider itself done.
+        /// * the new equip replaces the old equip (changing weapons): `return slot.Doff(force:true) && slot.Don(@new) ? true : !slot.Don(this)`
         /// * the old equip merges the new values (merging poison counters): `return (slot.Value += @new.Value) <= 0 ? slot.Doff(force:true) : true;`
-        ///   * This can be arbitrarily complex.
+        ///   * This can be arbitrarily complex, and theoretically you could be immune to poison or something and fail.
         /// * Special case, the old equip suppresses the new equip (grabbing 2 mushrooms in mario): `return true`.
         bool DoRebind(Slot slot, IEquip @new);
     }

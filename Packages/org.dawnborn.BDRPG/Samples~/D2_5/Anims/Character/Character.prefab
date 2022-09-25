@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 7663993861617378872}
   - component: {fileID: 6801788441709250967}
   - component: {fileID: 6111386858024531699}
+  - component: {fileID: 8735929853896873736}
+  - component: {fileID: 534091296688687548}
+  - component: {fileID: 4241566487874583508}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -119,6 +122,138 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &8735929853896873736
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498631703037910443}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &534091296688687548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498631703037910443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c438aafb2bfd43f6bb052387e4d6d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Strategy: 0
+  CanInterrupt: 1
+  Library: {fileID: 11400000, guid: 5e8a7ab78473b431db2eac038582de09, type: 2}
+  Category: 
+  Automation_: 0
+  index: -1
+--- !u!114 &4241566487874583508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498631703037910443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c438aafb2bfd43f6bb052387e4d6d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Strategy: 0
+  CanInterrupt: 1
+  Library: {fileID: 11400000, guid: 9c9bcbaa0d7274469befd806a1f904b9, type: 2}
+  Category: Hurt
+  Automation_: 0
+  index: -1
 --- !u!1 &7520364626457593947
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0d522ffea014832bfaa02dd479f05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Destroying: 0
 --- !u!114 &9040549653891361472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0.5
-  Debounce: 0.15
+  Debounce:
+    Length: 0
+    Start: 0
   AttackDegrees: 30
 --- !u!114 &5227378461790139482
 MonoBehaviour:

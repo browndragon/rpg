@@ -59,6 +59,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: e6806826beb1d4c349a68357c702d77c, type: 2}
+    - target: {fileID: 4655962379889502248, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660223740275719581, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
+      propertyPath: AudioLibrary
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4750953660936549006, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
+      propertyPath: Library
+      value: 
+      objectReference: {fileID: 11400000, guid: ac64e3aa7e9c44d5c8f8848aee90b6dc, type: 2}
     - target: {fileID: 5231311767596742461, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -66,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 7361763996049220045, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 99c646305bd094369a4a9d8fea463064, type: 2}
+      objectReference: {fileID: 22100000, guid: 09f1131bf8f85425283ff892a8b73a49, type: 2}
     - target: {fileID: 7524047373893786435, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
       propertyPath: OnStart_.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -91,39 +103,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.33985117
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8227789586895816159, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
 --- !u!1 &8373416974549834007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7611928480697366240, guid: d0738eb8a44dd40af8372b6b549f9037, type: 3}
   m_PrefabInstance: {fileID: 2132272730872082423}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &5733528922473714347
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8373416974549834007}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!58 &2194177710253692886
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -152,9 +139,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815e3e0f6acfe4d0d830cbe24d09d003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
-  Body: {fileID: 0}
-  OpenIf: {fileID: 0}
+  DelayOn:
+    Length: 0.25
+    Start: -Infinity
+  DelayOff:
+    Length: 0.25
+    Start: -Infinity
+  <IsOn>k__BackingField:
+    topic: {fileID: 0}
+    DefaultValue: 0
+  Publish:
+    m_PersistentCalls:
+      m_Calls: []
+  IsUnlocked: {fileID: 0}
   Filter:
     useTriggers: 1
     useLayerMask: 0
