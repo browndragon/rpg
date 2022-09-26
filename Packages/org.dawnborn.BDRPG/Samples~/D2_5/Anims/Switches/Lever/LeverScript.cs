@@ -1,4 +1,4 @@
-using BDUtil;
+using BDUtil.Math;
 using UnityEngine;
 using UnityEngine.Events;
 
