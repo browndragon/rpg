@@ -11,7 +11,6 @@ namespace BDRPG
         [Tooltip("If this is infinity, it can't get switched back off...")]
         public float DelayOff = .25f;
         [field: SerializeField] public BDUtil.Pubsub.Val<bool> IsOn { get; private set; }
-        public UnityEvent<bool> Publish;
         Animator animator;
 
         protected virtual void Awake()
@@ -27,7 +26,6 @@ namespace BDRPG
         void OnIsOn()
         {
             animator.SetBool("IsOn", IsOn.Value);
-            Publish?.Invoke(IsOn.Value);
             if (IsOn.Value) Delay = new(DelayOff);
             else Delay = new(DelayOn);
         }

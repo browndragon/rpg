@@ -46,7 +46,7 @@ namespace BDRPG
                 exFlag.SetParent(null);
                 Destroy(exFlag.gameObject);
             }
-            if (!ending && Flags.Count >= RequireFlags) ending = ending.Restart();
+            if (!ending && Flags.Collection.Count >= RequireFlags) ending = ending.Restart();
         }
         void OnGUI()
         {
